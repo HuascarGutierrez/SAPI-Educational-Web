@@ -1,17 +1,15 @@
-import './styles/MateriasQueOfrecemos.css'
+import './styles/UnidadesQueOfrecemos.css'
 import materias from "../../assets/cursos"
 import CursoOption from "../molecules/CursoOption"
 import clases from '../../assets/materias'
 import Clase from '../molecules/Clase'
+import HomeTitle from '../molecules/HomeTitle'
 
-function MateriasQueOfrecemos() {
+function UnidadesQueOfrecemos() {
   return (
-    <div className='materiasQueOfrecemos'>
-        <div className='materiasQueOfrecemos__title'>
-          <h2 className="materiasQueOfrecemos__text">Materias que ofrecemos</h2>
-          <img className='materiasQueOfrecemos__line' src="src/assets/cursosOfrecemos-line.svg" alt="" />
-        </div>
-        <section className='materiasQueOfrecemos__options'>
+    <div className='unidadesQueOfrecemos'>
+        <HomeTitle color='orange' title={'Unidades que ofrecemos'}/>
+        <section className='unidadesQueOfrecemos__options'>
             {
                 materias.map((materia, index)=>(
                     <CursoOption name={materia.name} key={index}/>
@@ -19,7 +17,7 @@ function MateriasQueOfrecemos() {
             }
         </section>
 
-        <section className='materiasQueOfrecemos__list'>
+        <section className='unidadesQueOfrecemos__list'>
             {
               clases.map((clase, index)=>(
                 <Clase key={index} clase={clase}/>
@@ -30,4 +28,4 @@ function MateriasQueOfrecemos() {
   )
 }
 
-export default MateriasQueOfrecemos
+export default UnidadesQueOfrecemos

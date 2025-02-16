@@ -1,0 +1,23 @@
+.homeTitle {
+    position: relative;
+    text-align: center;
+    color: var(--color-green-primary);
+}
+
+.homeTitle__text {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.homeTitle__line{
+    position: absolute;
+    right: -20%;
+}
+
+.homeTitle__text__orange{
+    color: var(--color-orange-secondary);
+}
+
+.homeTitle__text__green{
+    color: var(--color-green-primary);
+}

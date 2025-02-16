@@ -19,6 +19,7 @@
     line-height: 150%;
     letter-spacing: 0.39px;
     text-align: center;
+    padding-inline: 5px;
 }
 
 .clase__p{
