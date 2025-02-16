@@ -1,4 +1,4 @@
-const materias = [
+const cursos = [
     {
         name: 'Todos',
     },
@@ -16,4 +16,4 @@ const materias = [
     },
 ]
 
-export default materias
+export default cursos

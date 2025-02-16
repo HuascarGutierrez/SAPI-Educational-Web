@@ -1,0 +1,35 @@
+.materia{
+    width: 290px;
+    height: 330px;
+    border-radius: 15px;
+    background-color: var(--color-gray-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.materia:hover{
+    background-color: var(--color-white);
+    box-shadow: 2px 0px 30px 1px var(--color-green-light);
+}
+
+.materia_image{
+    width: 72px;
+    height: 72px;
+}
+
+.materia_span{
+    font-size: 27px;
+    font-weight: 600;
+    color: var(--color-green-primary);
+    letter-spacing: 1px;
+}
+
+.materia_p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29px;
+    color: var(--color-blue);
+    padding-inline: 15px;
+    text-align: center;
+}

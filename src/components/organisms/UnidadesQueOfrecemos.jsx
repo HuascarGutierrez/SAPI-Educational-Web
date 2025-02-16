@@ -1,7 +1,7 @@
 import './styles/UnidadesQueOfrecemos.css'
-import materias from "../../assets/cursos"
+import cursos from "../../assets/cursos"
 import CursoOption from "../molecules/CursoOption"
-import clases from '../../assets/materias'
+import clases from '../../assets/clases'
 import Clase from '../molecules/Clase'
 import HomeTitle from '../molecules/HomeTitle'
 
@@ -11,7 +11,7 @@ function UnidadesQueOfrecemos() {
         <HomeTitle color='orange' title={'Unidades que ofrecemos'}/>
         <section className='unidadesQueOfrecemos__options'>
             {
-                materias.map((materia, index)=>(
+                cursos.map((materia, index)=>(
                     <CursoOption name={materia.name} key={index}/>
                 ))
             }
