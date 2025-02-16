@@ -1,0 +1,19 @@
+.main-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 10px);
+    gap: 20px;
+    background-color: transparent;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 10px;
+    padding-inline: 5px;
+}
+.main-header__option {
+    font-size: 18px;
+    font-family: 'Raleway';
+    font-weight: 500;;
+    color: var(--color-blue);
+}

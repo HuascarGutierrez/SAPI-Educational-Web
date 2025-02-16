@@ -1,0 +1,21 @@
+:root {
+  --color-green-primary: #0B7077;
+  --color-green-light: #D2E6E4;
+  --color-orange-secondary: #FD661F;
+  --color-gray-light: #FBFBFB;
+  --color-gray-medium: #F5F5F5;
+  --color-white: #FFFFFF;
+  --color-blue: #252641;
+}
+
+body {
+  background-color: var(--color-gray-medium);
+}
+* {
+  margin: 0;
+  font-family: 'Raleway';
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts//Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+}

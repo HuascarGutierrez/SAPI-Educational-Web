@@ -1,0 +1,17 @@
+.main-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main-logo__logo {
+    width: 62px;
+    height: 37px;
+}
+
+.main-logo__name {
+    font-size: 30px;
+    font-family: 'Raleway';
+    font-weight: 900;
+    color: var(--color-green-primary);
+}
