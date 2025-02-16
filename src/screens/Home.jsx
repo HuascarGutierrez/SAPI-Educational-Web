@@ -1,3 +1,4 @@
+import MateriasQueOfrecemos from "../components/organisms/MateriasQueOfrecemos"
 import Header from "../components/organisms/Header"
 import Presentation from "../components/organisms/Presentation"
 
@@ -6,6 +7,7 @@ function Home() {
     <>
         <Header/>
         <Presentation/>
+        <MateriasQueOfrecemos/>
     </>
   )
 }

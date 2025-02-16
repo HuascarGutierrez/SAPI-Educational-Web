@@ -1,0 +1,24 @@
+.cursoOption {
+    width: 150px;
+    height: 48px;
+    border: #C5C5C5 solid 1px;
+    background-color: var(--color-gray-light);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cursoOption:hover{
+    background-color: var(--color-green-primary);
+    border: none;
+}
+
+.cursoOption__name{
+    font-size: 18px;
+    color: #818C96;
+}
+
+.cursoOption__name:hover{
+    color: var(--color-gray-light);
+}

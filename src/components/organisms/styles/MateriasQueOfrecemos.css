@@ -1,0 +1,37 @@
+.materiasQueOfrecemos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.materiasQueOfrecemos__title {
+    position: relative;
+    color: var(--color-orange-secondary);
+    padding-top: 12%;
+    text-align: center;
+}
+
+.materiasQueOfrecemos__text {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.materiasQueOfrecemos__line{
+    position: absolute;
+    right: -150px;
+}
+
+.materiasQueOfrecemos__options{
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.materiasQueOfrecemos__list{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
