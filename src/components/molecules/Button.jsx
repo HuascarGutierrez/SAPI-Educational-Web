@@ -1,17 +1,11 @@
 
-import { useNavigate } from 'react-router-dom';
 import './styles/Button.css'
 import PropTypes from 'prop-types';
 
-function Button({text, color= 'white', destination}) {
-  const navigate = useNavigate();
-
-  const onClickNavigate = () => {
-    navigate(destination)
-  }
+function Button({text, color= 'white', funcion}) {
 
   return (
-    <button onClick={onClickNavigate} className={`main-header__button main-header__button__`+color}>
+    <button onClick={funcion} className={`main-header__button main-header__button__`+color}>
         {text}
     </button>
   )
@@ -19,7 +13,7 @@ function Button({text, color= 'white', destination}) {
 Button.propTypes = {
   text: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
-  destination: PropTypes.string.isRequired,
+  funcion: PropTypes.func.isRequired,
 };
 
 export default Button

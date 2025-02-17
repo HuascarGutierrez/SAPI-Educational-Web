@@ -6,9 +6,10 @@ import LeftArrow from '../components/molecules/LeftArrow.jsx';
 import { useNavigate } from 'react-router-dom';
 
 function SignUp() {
+
     const navigate = useNavigate();
     const handleReturn = () => {
-        navigate('/');
+        navigate('../');
     }
 
     const emailRef = useRef(null);
@@ -27,8 +28,10 @@ function SignUp() {
                 return
             }
             const userCRedential = await createUserWithEmailAndPassword(auth, email, password);
+
             console.log('Usuario registrado: ',userCRedential.user);
             alert('Registro exitoso.')
+            navigate('/')
         } catch(error){
             console.error('error en el registro: ',error.message)
         }
