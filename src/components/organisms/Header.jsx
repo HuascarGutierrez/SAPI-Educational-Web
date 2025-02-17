@@ -12,8 +12,8 @@ function Header() {
         <p className="main-header__option">Blog</p>
         <p className="main-header__option">Sobre Nosotros</p>
         <div style={{display: 'flex', gap: '10px', width: '25%'}}>
-          <Button text="Inicio Sesión"/>
-          <Button text="Registrarse" color="green"/>
+          <Button text="Inicio Sesión" destination={'/login'}/>
+          <Button text="Registrarse" color="green" destination={'/signup'}/>
         </div>
     </header>
   )
