@@ -5,11 +5,11 @@ function Presentation() {
     <div className="presentation">
       <img className='presentation__lines' src="images/svg/presentationLines.svg"/>
       <span className='presentation__span'>No Pares de Estudiar</span>
-      <h3 className='presentation__phrase'>AYUDANOS A<br/> CUMPLIR TUS METAS</h3>
-      <section>
-        <div className='presentation__rectangle__long'></div>
-        <div className='presentation__rectangle__first'></div>
-        <div className='presentation__rectangle__second'></div>
+      <section className='presentation__rectangle'>
+        <h3 className='presentation__phrase'>
+          <span>AYUDANOS <div className='presentation__rectangle__long'></div></span> A<br/> 
+          <span>CUMPLIR <div className='presentation__rectangle__first'></div></span> TUS  
+          <span> METAS <div className='presentation__rectangle__second'></div></span></h3>
       </section>
       <section>
         <img className="presentation__image presentation__image__man" src="images/presentation-man.webp" alt="presentation-man" />

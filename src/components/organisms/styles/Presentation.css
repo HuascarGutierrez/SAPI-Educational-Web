@@ -13,34 +13,45 @@
     left: 0;
 }
 
+.presentation__rectangle{
+  min-width: 60%;
+  height: 32%;
+  position: absolute;
+  top: 30%;
+  left: 2%;
+}
+
 .presentation__rectangle__long{
     background-color: var(--color-white);
     position: absolute;
-    width: 17%;
-    height: 4%;
-    top: 45%;
-    left: 12%;
-    transform: rotate(1deg);
+    width: 80%;
+    height: 25%;
+    bottom: 10%;
+    left: 10%;
+    transform: rotate(1.5deg);
+    z-index: -1;
 }
 
 .presentation__rectangle__first{
     background-color: var(--color-white);
     position: absolute;
-    width: 12%;
-    height: 4%;
-    top: 55%;
-    left: 12%;
+    width: 80%;
+    height: 25%;
+    bottom: 10%;
+    left: 10%;
     transform: rotate(-2deg);
+    z-index: -1;
 }
 
 .presentation__rectangle__second{
     background-color: var(--color-white);
     position: absolute;
-    width: 12%;
-    height: 4%;
-    top: 55%;
-    left: 38%;
+    width: 80%;
+    height: 25%;
+    bottom: 10%;
+    right: 10%;
     transform: rotate(1deg);
+    z-index: -1;
 }
 
 .presentation__span{
@@ -57,13 +68,18 @@
 }
 
 .presentation__phrase{
-    font-size: 4rem;
+    font-size: 10vmin;
     font-weight: 700;
     color: var(--color-green-primary);
     position: absolute;
-    top: 39%;
-    left: 8%; 
-    z-index: 2;
+    top: 30%;
+    left: 10%; 
+}
+
+.presentation__phrase span{
+  position: relative;
+  font-weight: 700;
+  z-index: 1;
 }
 
 .presentation__button{
@@ -163,7 +179,8 @@
       height: 250px;
     }
     .presentation__phrase{
-      font-size: 1.15rem;
+      font-size: 1em;
+      font-size-adjust: inherit;
       top: 40%;
     }
 
@@ -203,9 +220,5 @@
     .presentation__image__calendar{
       right: 38%;
       top: 50%;
-    }
-
-    .presentation__rectangle__second{
-      left: 42%;
     }
   }
