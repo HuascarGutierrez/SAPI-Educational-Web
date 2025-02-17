@@ -2,7 +2,7 @@
     position: relative;
     text-align: center;
     color: var(--color-green-primary);
-    
+    padding-top: 5vh;
 }
 
 .homeTitle__text {
