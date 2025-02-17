@@ -3,6 +3,7 @@ import Header from "../components/organisms/Header"
 import Presentation from "../components/organisms/Presentation"
 import Materias from "../components/organisms/Materias"
 import Benefits from "../components/organisms/Benefits"
+import PadresYTutores from "../components/organisms/PadresYTutores"
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
         <UnidadesQueOfrecemos/>
         <Materias/>
         <Benefits/>
+        <PadresYTutores/>
     </div>
   )
 }
