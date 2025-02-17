@@ -26,7 +26,7 @@ function Presentation() {
             />
             <text className="presentation__buttonSection__buttonTextExplore">
               <textPath href="#circlePath">
-                EXPLORE MORE - EXPLORE MORE -
+                EXPLORA MÁS - EXPLORA MÁS -
               </textPath>
             </text>
           </svg>

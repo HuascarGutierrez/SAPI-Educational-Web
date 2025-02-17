@@ -1,0 +1,32 @@
+.benefits{
+    height: 344px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 85%;
+}
+
+.benefits_image{
+    height: 344px;
+    background-color: var(--color-green-light);
+    border-radius: 20px;
+}
+
+.benefits_section{
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 50px;
+    padding-inline: 60px;
+}
+
+.benefits_section_title{
+    height: 10%;
+}
+.benefits_section_list{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
