@@ -3,7 +3,7 @@ import './styles/Presentation.css'
 function Presentation() {
   return (
     <div className="presentation">
-      <img className='presentation__lines' src="src/assets/presentationLines.svg"/>
+      <img className='presentation__lines' src="images/svg/presentationLines.svg"/>
       <span className='presentation__span'>No Pares de Estudiar</span>
       <h3 className='presentation__phrase'>AYUDANOS A<br/> CUMPLIR TUS METAS</h3>
       <section>
@@ -32,7 +32,7 @@ function Presentation() {
           </svg>
           <img
             className="presentation__buttonSection__button__play"
-            src="src/assets/presentation-play.svg"
+            src="images/svg/presentation-play.svg"
             alt=""
           />
         </button>

@@ -5,8 +5,8 @@ function HomeTitle({color, title}) {
     <div className='homeTitle'>
       <h2 className={"homeTitle__text homeTitle__text__"+color}>{title}</h2>
       { 
-        color == 'orange'?<img className='homeTitle__line' src="src/assets/cursosOfrecemos-line.svg" alt="" />:
-        <img className='homeTitle__line' src="src/assets/cursosOfrecemos-line-orange.svg" alt="" /> 
+        color == 'orange'?<img className='homeTitle__line' src="images/svg/cursosOfrecemos-line.svg" alt="" />:
+        <img className='homeTitle__line' src="images/svg/cursosOfrecemos-line-orange.svg" alt="" /> 
       }
     </div>
   )
