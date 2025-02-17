@@ -4,6 +4,7 @@ import Presentation from "../components/organisms/Presentation"
 import Materias from "../components/organisms/Materias"
 import Benefits from "../components/organisms/Benefits"
 import PadresYTutores from "../components/organisms/PadresYTutores"
+import Footer from "../components/organisms/Footer"
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
         <Materias/>
         <Benefits/>
         <PadresYTutores/>
+        <Footer/>
     </div>
   )
 }

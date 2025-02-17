@@ -5,7 +5,7 @@ import Button from '../molecules/Button'
 function Header() {
 
   return (
-    <div className="main-header">
+    <header className="main-header">
         <Logo/>
         <p className="main-header__option">Home</p>
         <p className="main-header__option">Materias</p>
@@ -15,7 +15,7 @@ function Header() {
           <Button text="Inicio Sesión"/>
           <Button text="Registrarse" color="green"/>
         </div>
-    </div>
+    </header>
   )
 }
 
