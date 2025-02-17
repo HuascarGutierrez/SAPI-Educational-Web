@@ -16,11 +16,9 @@
     flex-direction: row;
     align-items: center;
     z-index: 2;
-}
-
-.signup_volver p{
     font-size: 1.8em;;
     color: var(--color-green-light);
+    background-color: transparent;
 }
 
 .signup_form{
@@ -52,6 +50,7 @@
     color: var(--color-blue);
     text-align: center;
     letter-spacing: 2px;
+    line-height: 160%;
 }
 
 .signup_form_inputs{
@@ -60,6 +59,7 @@
     justify-content: space-between;
     width: 100%;
     height: 100%;
+    gap: 5px;
 }
 
 
@@ -88,6 +88,7 @@
 }
 
 .signup_rectangle{
+    width: 35%;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -99,4 +100,23 @@
     top: 0;
     left: 0;
     z-index: 1;
+}
+
+@media (max-width: 500px) {
+    .signup_form{
+        width: 90%;
+        height: 70%;
+        padding: 10%;
+        padding-inline: 7%;
+    }
+
+    .signup_rectangle{
+        width: 90%;
+    }   
+}
+
+@media (max-height: 500px) and (orientation: landscape){
+    .signup{
+        height: 100%;
+    }   
 }

@@ -35,13 +35,13 @@ function SignUp() {
     }
   return (
     <section className="signup">
-        <div onClick={handleReturn} className='signup_volver'>
+        <button onClick={handleReturn} className='signup_volver'>
             <LeftArrow color={'var(--color-green-light)'} size={'2em'}/>
-            <p>Volver</p>
-        </div>
+            Volver
+        </button>
         <form className="signup_form" onSubmit={handleSubmit}>
             <h2 className='signup_form_h2'>Crea Una Cuenta</h2>
-            <p className='signup_form_p'>Inicia la experiencia dde aprender nuevas cosas junto con SAPI</p>
+            <p className='signup_form_p'>Inicia la experiencia donde aprenderás nuevas cosas junto con SAPI</p>
             <section className='signup_form_inputs'> 
                 <input className='signup_form_input'  type="email" placeholder="tucorreo@email.com" ref={emailRef} required/>
                 <input className='signup_form_input' type="password" placeholder="Contraseña" ref={passwordRef} required/>
