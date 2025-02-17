@@ -1,12 +1,14 @@
 .cursoOption {
-    width: 150px;
-    height: 48px;
+    width: 15%;
+    height: 8vmin;
     border: #C5C5C5 solid 1px;
     background-color: var(--color-gray-light);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.1em;
+    color: var(--color-green-primary);
 }
 
 .cursoOption:hover{
@@ -14,11 +16,12 @@
     border: none;
     color: var(--color-gray-light);
 }
-.cursoOption:hover .cursoOption__name{
-    color: var(--color-gray-light);
-}
 
-.cursoOption__name{
-    font-size: 18px;
-    color: #818C96;
+@media (max-width: 500px) {
+    .cursoOption{
+        width: 18%;
+        height: 10vmin;
+        font-size: 0.9em;
+    }
+    
 }

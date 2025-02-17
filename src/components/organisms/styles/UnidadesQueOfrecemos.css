@@ -4,13 +4,14 @@
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    overflow-x: hidden;
 }
 
 .unidadesQueOfrecemos__options{
-    width: 900px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .unidadesQueOfrecemos__list{
@@ -18,4 +19,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+    .unidadesQueOfrecemos{
+        gap: 20px;
+    }
+
+    .unidadesQueOfrecemos__list{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }

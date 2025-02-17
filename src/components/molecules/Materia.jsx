@@ -4,8 +4,8 @@ import { useState } from 'react'
 function Materia({materia}) {
   const [hover, setHover] = useState(false)
   return (
-    <div onMouseEnter={() => setHover(true)}
-    onMouseLeave={() => setHover(false)} className='materia'>
+    <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} 
+    className='materia'>
         <img className='materia_image' src={materia.imageUrl} alt={materia.name} />
         <span className='materia_span'>{materia.name}</span>
         <p className='materia_p'>{materia.description}</p>

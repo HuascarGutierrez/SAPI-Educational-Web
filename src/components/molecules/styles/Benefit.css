@@ -17,7 +17,13 @@
 
 .benefit_text{
     color: var(--color-blue);
-    font-size: 18px;
+    font-size: 1.1em;
     font-weight: 400;
     line-height: 180%;
+}
+
+@media (max-width: 500px) {
+    .benefit{
+        flex-direction: column;
+    }
 }

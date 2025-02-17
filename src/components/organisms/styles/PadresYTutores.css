@@ -12,3 +12,9 @@
 .PadresYTutores_image{
     background-color: transparent;
 }
+
+@media (max-width: 500px) {
+    .PadresYTutores{
+        flex-direction: column;
+    }
+}

@@ -9,7 +9,7 @@
     width: 70%;
     line-height: 160%;
     text-align: center;
-    font-size: 25px;
+    font-size: 1.7em;
     font-weight: 300;
     letter-spacing: 2px;
 }
@@ -19,4 +19,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+@media (max-width: 500px) {
+    .materias{
+        gap: 20px;
+    }
+    .materias_span{
+        width: 85vw;
+        line-height: 120%;
+        font-size: 1em;
+        letter-spacing: 0;
+    }   
+    
+    .materias_list{
+        flex-direction: column;
+        gap: 20px;
+    }
 }

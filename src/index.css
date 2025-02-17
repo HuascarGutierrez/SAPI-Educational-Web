@@ -10,7 +10,9 @@
 
 body {
   background-color: var(--color-gray-medium);
+  width: 100vw;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;

@@ -5,13 +5,19 @@
 }
 
 .main-logo__logo {
-    width: 62px;
-    height: 37px;
+    width: 12vmin;
+    height: 12vmin;
 }
 
 .main-logo__name {
-    font-size: 30px;
+    font-size: 2em;
     font-family: 'Raleway';
     font-weight: 900;
     color: var(--color-green-primary);
+}
+
+@media (max-width: 500px) {
+    .main-logo__name{
+        display: none;
+    }
 }
