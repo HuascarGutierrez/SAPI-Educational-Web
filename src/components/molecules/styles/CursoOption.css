@@ -12,13 +12,13 @@
 .cursoOption:hover{
     background-color: var(--color-green-primary);
     border: none;
+    color: var(--color-gray-light);
+}
+.cursoOption:hover .cursoOption__name{
+    color: var(--color-gray-light);
 }
 
 .cursoOption__name{
     font-size: 18px;
     color: #818C96;
-}
-
-.cursoOption__name:hover{
-    color: var(--color-gray-light);
 }
