@@ -5,7 +5,7 @@ import './App.css'
 import SignUp from './screens/SignUp'
 import Login from './screens/Login'
 import { useEffect, useState } from "react"
-import { onAuthStateChanged, getRedirectResult} from "firebase/auth"
+import { onAuthStateChanged } from "firebase/auth"
 import { auth } from './config/app'
 
 function App() {
@@ -15,11 +15,11 @@ function App() {
     const unsubcribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser){
         setUser(currentUser);
-        console.log(currentUser);
+        console.log('currentUser');
       } else setUser(null);
     })
 
-    getRedirectResult(auth)
+    /**getRedirectResult(auth)
       .then((result) => {
         console.log(result)
         if (result?.user) {
@@ -29,7 +29,7 @@ function App() {
       })
       .catch((error) => {
         console.error("Error en la autenticación con Google:", error);
-      });
+      });*/
     return () => unsubcribe();
   }, [])
 
