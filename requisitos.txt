@@ -1,0 +1,4 @@
+react-router-dom
+firebase
+sweetalert2
+react-spinners

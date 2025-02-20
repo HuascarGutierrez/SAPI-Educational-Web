@@ -5,20 +5,10 @@ import Materias from "../components/organisms/Materias"
 import Benefits from "../components/organisms/Benefits"
 import PadresYTutores from "../components/organisms/PadresYTutores"
 import Footer from "../components/organisms/Footer"
-import { useEffect, useState } from "react"
-import { onAuthStateChanged } from "firebase/auth"
-import { auth } from "../config/app"
+import PropTypes from 'prop-types'
 
-function Home() {
-  const [user, setUser] = useState(null);
-
-  useEffect(()=> {
-    const unsubcribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    })
-
-    return () => unsubcribe();
-  }, [])
+function Home({user}) {
+  
   return (
     <div style={{display: 'flex', flexDirection: 'column', gap: '40px', alignItems: 'center'}}>
         <Header user={user}/> 
@@ -30,6 +20,10 @@ function Home() {
         <Footer/>
     </div>
   )
+}
+
+Home.propTypes = {
+  user: PropTypes.object,
 }
 
 export default Home

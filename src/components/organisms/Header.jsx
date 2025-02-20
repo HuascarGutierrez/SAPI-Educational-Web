@@ -4,16 +4,43 @@ import Button from '../molecules/Button'
 import PropTypes from 'prop-types'
 import { getAuth, signOut } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2'
 function Header({user}) {
   const navigate = useNavigate();
+
+  const alertSignOut = () => {
+    Swal.fire({
+      title: "Hasta pronto!",
+      text: "No te olvides de seguir adelante.",
+      icon: "info",
+      iconColor: 'var(--color-green-primary)',
+      confirmButtonText: "OK",
+      background: "var(--color-green-light)", 
+      color: "var(--color-green-primary)",
+      confirmButtonColor: "var(--color-green-primary)",
+    });
+  }
+
+  const alertWarning = (texto) => {
+    Swal.fire({
+      title: 'Error',
+      text: texto,
+      icon: 'error',
+      iconColor: '#ff0000',
+      confirmButtonText: 'Entendido',
+      background: 'var(--color-blue)',
+      color: '#ff0000',
+      confirmButtonColor: '#ff0000',
+    })
+  }
 
   const handleSignOut = async() => {
     const auth = getAuth();
     signOut(auth).then(() => {
-      alert('Sesion finalizada');
-      navigate('/')
+      alertSignOut();
+      navigate('/');
     }).catch((error) => {
-      alert('Error de logout: ', error)
+      alertWarning(`Error de logout: ${error}`);
     })
   }
 
@@ -32,10 +59,10 @@ function Header({user}) {
         <p className="main-header__option">Materias</p>
         <p className="main-header__option">Blog</p>
         <p className="main-header__option">Sobre Nosotros</p>
-        <div style={{display: 'flex', alignItems: 'center', gap: '10px', minWidth: '25%'}}>
-          {user ? 
+        <div style={{display: 'flex', alignItems: 'center', gap: '10px', minWidth: '25%', justifyContent: 'space-around'}}>
+          {user?.emailVerified? 
           <>
-            <p className='main-header__option'>Bienvienido<br/> {user.providerData[0].email}</p> 
+            <p className='main-header__option'>Bienvienido<br/> {user.providerData[0].email.split('@')[0].substr(0,20)}</p> 
             <Button text="Cerrar Sesión" funcion={handleSignOut}/>
           </> :
           <>
@@ -48,7 +75,7 @@ function Header({user}) {
 }
 
 Header.propTypes = {
-  user: PropTypes.object.isRequired,
+  user: PropTypes.object,
 }
 
 export default Header
