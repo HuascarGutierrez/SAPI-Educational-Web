@@ -13,8 +13,10 @@ function App() {
 
   useEffect(()=> {
     const unsubcribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser ? currentUser : null);
-      console.log(currentUser)
+      if (currentUser){
+        setUser(currentUser);
+        console.log(currentUser);
+      } else setUser(null);
     })
 
     getRedirectResult(auth)
