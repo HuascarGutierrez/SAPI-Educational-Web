@@ -27,7 +27,7 @@ function SignUp() {
     const handleSuccess = () => {
         Swal.fire({
             title: 'Verifica tu correo',
-            text: 'Tu usuario ha sido creado, verifica tu correo para continuar',
+            text: 'Tu usuario ha sido creado, verifica el SPAM tu correo para verificar.',
             icon: 'info',
             iconColor: '#ffff00',
             confirmButtonText: 'Continuar',

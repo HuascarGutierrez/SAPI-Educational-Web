@@ -30,7 +30,7 @@ function Login() {
                     navigate('/');
                 } else {
                     signOut(auth)
-                    handleErrorNoti({texto: "Verifica tu correo para continuar.", title: 'Verifica tu correo', color: '#ccccff'})
+                    handleErrorNoti({texto: "Verifica el SPAM de tu correo para continuar.", title: 'Verifica tu correo', color: '#ccccff'})
                 }
             })
             
