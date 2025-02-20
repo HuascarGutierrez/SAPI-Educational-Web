@@ -5,6 +5,7 @@ import { auth } from "../config/app";
 import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { ClipLoader } from "react-spinners";
 import { handleErrorNoti, handleSuccess } from "../config/alerts";
+import GoogleButton from "../components/molecules/GoogleButton";
 
 function Login() {
     const [waiting, setWaiting] = useState(false);
@@ -46,17 +47,20 @@ function Login() {
                 <LeftArrow color={'var(--color-green-light)'} size={'2em'}/>
                 Volver
             </button>
-            <form className="signup_form" onSubmit={handleSubmit}>
-                <h2 className='signup_form_h2'>Inicia Sesion</h2>
-                <p className='signup_form_p'>Entra a los mejores recursos<br/> en el línea.</p>
-                <section className='signup_form_inputs'> 
-                    <input className='signup_form_input'  type="email" placeholder="tucorreo@email.com" ref={emailRef} required/>
-                    <input className='signup_form_input' type="password" placeholder="Contraseña" ref={passwordRef} required/>
-                    {
-                        waiting? <div style={{marginInline: 'auto'}}><ClipLoader color="var(--color-green-primary)" size={40}/></div> : <button className='signup_form_button' type="submit">INGRESAR</button>
-                    }
-                </section>
-            </form>
+            <div className="signup_form">
+                <form className="signup_form_formulario" onSubmit={handleSubmit}>
+                    <h2 className='signup_form_h2'>Inicia Sesion</h2>
+                    <p className='signup_form_p'>Entra a los mejores recursos<br/> en el línea.</p>
+                    <section className='signup_form_inputs'> 
+                        <input className='signup_form_input'  type="email" placeholder="tucorreo@email.com" ref={emailRef} required/>
+                        <input className='signup_form_input' type="password" placeholder="Contraseña" ref={passwordRef} required/>
+                        {
+                            waiting? <div style={{marginInline: 'auto'}}><ClipLoader color="var(--color-green-primary)" size={40}/></div> : <button className='signup_form_button' type="submit">INGRESAR</button>
+                        }
+                    </section>
+                </form>
+                <GoogleButton/>
+            </div>
             <img className='signup_rectangle' src="images/svg/signup-rectangle.svg"/>
             <img className='signup_rectangle' src="images/svg/signup-rectangle.svg"/>
     </section>

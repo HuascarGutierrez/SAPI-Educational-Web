@@ -1,0 +1,43 @@
+import { signInWithPopup, GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
+import { auth } from "../../config/app";
+import './styles/GoogleButton.css'
+import { handleErrorNoti } from "../../config/alerts";
+
+const handleAuth = () => {
+    const provider = new GoogleAuthProvider();
+
+    signInWithRedirect(auth, provider)
+    .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        //const credential = GoogleAuthProvider.credentialFromResult(result);
+        //const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        console.log(user)
+        // IdP data available using getAdditionalUserInfo(result)
+        // ...
+    }).catch((error) => {
+        handleErrorNoti(`error en el registro: ${error.message}`)
+        // Handle Errors here.
+    //    const errorCode = error.code;
+    //    const errorMessage = error.message;
+        // The email of the user's account used.
+    //    const email = error.customData.email;
+        // The AuthCredential type that was used.
+    //    const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+    });
+}
+
+function GoogleButton() {
+    
+
+    return (
+        <button onClick={handleAuth} className="googleButton">
+            <img src="images/svg/google-logo.svg" alt="google-icon"/>
+            <p>Usar tu cuenta de Google</p>
+        </button>
+    )
+    }
+
+export default GoogleButton

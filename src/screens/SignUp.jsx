@@ -5,8 +5,8 @@ import { auth } from '../config/app.js'
 import LeftArrow from '../components/molecules/LeftArrow.jsx';
 import { useNavigate } from 'react-router-dom';
 import { ClipLoader } from 'react-spinners';
-
 import Swal from 'sweetalert2';
+import GoogleButton from '../components/molecules/GoogleButton.jsx';
 
 function SignUp() {
     const [waiting, setWaiting] = useState(false)
@@ -76,7 +76,7 @@ function SignUp() {
             }
             //const userCRedential = await createUserWithEmailAndPassword(auth, email, password);
             await createUserWithEmailAndPassword(auth, email, password);
-            await sendEmailVerification(auth.currentUser)
+            await sendEmailVerification(auth.currentUser);
 
             //console.log('Usuario registrado: ',userCRedential.user);
             handleSuccess();
@@ -92,19 +92,22 @@ function SignUp() {
             <LeftArrow color={'var(--color-green-light)'} size={'2em'}/>
             Volver
         </button>
-        <form className="signup_form" onSubmit={handleSubmit}>
-            <h2 className='signup_form_h2'>Crea Una Cuenta</h2>
-            <p className='signup_form_p'>Inicia la experiencia donde aprenderás nuevas cosas junto con SAPI</p>
-            <section className='signup_form_inputs'> 
-                <input className='signup_form_input'  type="email" placeholder="tucorreo@email.com" ref={emailRef} required/>
-                <input className='signup_form_input' type="password" placeholder="Contraseña" ref={passwordRef} required/>
-                <input className='signup_form_input' type="password" placeholder="Repita su contraseña" ref={passwordVerREf} required/>
-                {
-                    waiting ? <div style={{marginInline: 'auto'}}><ClipLoader color="var(--color-green-primary)" size={40}/></div> :
-                     <button className='signup_form_button' type="submit">CREAR MI CUENTA</button>
-                }
-            </section>
-        </form>
+        <div className='signup_form'>
+            <form className='signup_form_formulario' onSubmit={handleSubmit}>
+                <h2 className='signup_form_h2'>Crea Una Cuenta</h2>
+                <p className='signup_form_p'>Inicia la experiencia donde aprenderás nuevas cosas junto con SAPI</p>
+                <section className='signup_form_inputs'> 
+                    <input className='signup_form_input'  type="email" placeholder="tucorreo@email.com" ref={emailRef} required/>
+                    <input className='signup_form_input' type="password" placeholder="Contraseña" ref={passwordRef} required/>
+                    <input className='signup_form_input' type="password" placeholder="Repita su contraseña" ref={passwordVerREf} required/>
+                    {
+                        waiting ? <div style={{marginInline: 'auto'}}><ClipLoader color="var(--color-green-primary)" size={40}/></div> :
+                        <button className='signup_form_button' type="submit">CREAR MI CUENTA</button>
+                    }
+                </section>
+            </form>
+            <GoogleButton/>
+        </div>
         <img className='signup_rectangle' src="images/svg/signup-rectangle.svg"/>
         <img className='signup_rectangle' src="images/svg/signup-rectangle.svg"/>
     </section>
