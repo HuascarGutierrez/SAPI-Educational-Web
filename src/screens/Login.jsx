@@ -31,7 +31,7 @@ function Login() {
                     navigate('/');
                 } else {
                     signOut(auth)
-                    handleErrorNoti({texto: "Verifica el SPAM de tu correo para continuar.", title: 'Verifica tu correo', color: '#ccccff'})
+                    handleErrorNoti({texto: "Tu usuario ha sido creado, verifica el SPAM de tu correo para verificar.", title: 'Verifica tu correo', color: '#ccccff'})
                 }
             })
             
@@ -50,7 +50,7 @@ function Login() {
             <div className="signup_form">
                 <form className="signup_form_formulario" onSubmit={handleSubmit}>
                     <h2 className='signup_form_h2'>Inicia Sesion</h2>
-                    <p className='signup_form_p'>Entra a los mejores recursos<br/> en el línea.</p>
+                    <p className='signup_form_p'>Entra a los mejores recursos en el línea.</p>
                     <section className='signup_form_inputs'> 
                         <input className='signup_form_input'  type="email" placeholder="tucorreo@email.com" ref={emailRef} required/>
                         <input className='signup_form_input' type="password" placeholder="Contraseña" ref={passwordRef} required/>
@@ -61,8 +61,6 @@ function Login() {
                 </form>
                 <GoogleButton/>
             </div>
-            <img className='signup_rectangle' src="images/svg/signup-rectangle.svg"/>
-            <img className='signup_rectangle' src="images/svg/signup-rectangle.svg"/>
     </section>
   )
 }

@@ -1,4 +1,5 @@
 import './styles/Signup.css'
+import './styles/TuEspacio.css'
 import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import { useState, useRef } from "react"
 import { auth } from '../config/app.js'
@@ -27,7 +28,7 @@ function SignUp() {
     const handleSuccess = () => {
         Swal.fire({
             title: 'Verifica tu correo',
-            text: 'Tu usuario ha sido creado, verifica el SPAM tu correo para verificar.',
+            text: 'Tu usuario ha sido creado, verifica el SPAM de tu correo para verificar.',
             icon: 'info',
             iconColor: '#ffff00',
             confirmButtonText: 'Continuar',
@@ -87,7 +88,7 @@ function SignUp() {
         setWaiting(false)
     }
   return (
-    <section className="signup">
+    <section className="signup signup_tuEspacio">
         <button onClick={handleReturn} className='signup_volver'>
             <LeftArrow color={'var(--color-green-light)'} size={'2em'}/>
             Volver
@@ -108,8 +109,6 @@ function SignUp() {
             </form>
             <GoogleButton/>
         </div>
-        <img className='signup_rectangle' src="images/svg/signup-rectangle.svg"/>
-        <img className='signup_rectangle' src="images/svg/signup-rectangle.svg"/>
     </section>
   )
 }

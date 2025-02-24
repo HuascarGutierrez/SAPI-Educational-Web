@@ -52,17 +52,21 @@ function Header({user}) {
     navigate('/login')
   } 
 
+  const handleOptionsNav = () => {
+    user ? navigate('/tuEspacio') : navigate('/login');
+  }
+
   return (
     <header className="main-header">
         <Logo/>
         <p className="main-header__option">Home</p>
         <p className="main-header__option">Materias</p>
-        <p className="main-header__option">Blog</p>
+        <p onClick={handleOptionsNav} className="main-header__option">Tu Espacio</p>
         <p className="main-header__option">Sobre Nosotros</p>
         <div style={{display: 'flex', alignItems: 'center', gap: '10px', minWidth: '25%', justifyContent: 'space-around'}}>
           {user?.emailVerified? 
           <>
-            <p className='main-header__option'>Bienvienido<br/> {user.email.split('@')[0].substr(0,20)}</p> 
+            <p className='main-header__option'>Bienvienido<br/> {user.displayName.split('@')[0].substr(0,20)}</p> 
             <Button text="Cerrar Sesión" funcion={handleSignOut}/>
           </> :
           <>

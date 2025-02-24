@@ -17,7 +17,7 @@ function GoogleButton() {
             //const token = credential.accessToken;
             // The signed-in user info.
             const user = result.user;
-            console.log(user)
+            //console.log(user)
             if(user) navigate('/');
             // IdP data available using getAdditionalUserInfo(result)
             // ...
