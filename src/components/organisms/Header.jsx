@@ -66,7 +66,7 @@ function Header({user}) {
         <div style={{display: 'flex', alignItems: 'center', gap: '10px', minWidth: '25%', justifyContent: 'space-around'}}>
           {user?.emailVerified? 
           <>
-            <p className='main-header__option'>Bienvienido<br/> {user.displayName.split('@')[0].substr(0,20)}</p> 
+            <p className='main-header__option'>Bienvienido<br/> {user.displayName}</p> 
             <Button text="Cerrar Sesión" funcion={handleSignOut}/>
           </> :
           <>

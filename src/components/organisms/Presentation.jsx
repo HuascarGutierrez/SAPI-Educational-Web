@@ -12,7 +12,7 @@ function Presentation() {
           <span> METAS <div className='presentation__rectangle__second'></div></span></h3>
       </section>
       <section>
-        <img className="presentation__image presentation__image__man" src="images/presentation-man.webp" alt="presentation-man" />
+        <img className="presentation__image presentation__image__man" src="images/veloz.webp" alt="presentation-man" />
         <img className="presentation__image presentation__image__calendar" src="images/presentation-calendar.webp" alt="presentation-calendar" />
         <img className="presentation__image presentation__image__bar" src="images/presentation-bar.webp" alt="presentation-bar"/>
       </section>

@@ -1,8 +1,8 @@
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../../config/app";
 import './styles/GoogleButton.css'
-import { handleErrorNoti } from "../../config/alerts";
 import { useNavigate } from "react-router-dom";
+import { handleSuccess, handleErrorNoti } from "../../config/alerts";
 
 function GoogleButton() {
     const navigate = useNavigate();
@@ -18,7 +18,10 @@ function GoogleButton() {
             // The signed-in user info.
             const user = result.user;
             //console.log(user)
-            if(user) navigate('/');
+            if(user) {
+                navigate('/');
+                handleSuccess({texto: "Inicio de sesión exitoso."})
+            }
             // IdP data available using getAdditionalUserInfo(result)
             // ...
         }).catch((error) => {

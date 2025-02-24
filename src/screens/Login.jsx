@@ -31,7 +31,7 @@ function Login() {
                     navigate('/');
                 } else {
                     signOut(auth)
-                    handleErrorNoti({texto: "Tu usuario ha sido creado, verifica el SPAM de tu correo para verificar.", title: 'Verifica tu correo', color: '#ccccff'})
+                    handleErrorNoti({texto: "Error al iniciar sesión", title: 'Error', color: '#ccccff'})
                 }
             })
             
