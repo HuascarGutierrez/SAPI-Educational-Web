@@ -6,7 +6,7 @@ function Presentation() {
       <section className='presentation__rectangle'>
         <img className='presentation__lines' src="images/svg/presentationLines.svg"/>
         <h3 className='presentation__phrase'>
-          Únete a <span><div className='presentation__rectangle__long'></div>Upgrade</span><br /><span>
+          Únete a <span><div className='presentation__rectangle__long'></div>Upgr4de</span><br /><span>
           <div className='presentation__rectangle__long'></div>Academy</span> y aprende<br/> con nosotros  
         </h3>
         <p className='presentation__text'>Somos una academia enfocada<br/> en ayudar a estudiantes<br/> con dificultades en materias STEM.</p>
