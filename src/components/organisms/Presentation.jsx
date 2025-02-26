@@ -3,17 +3,16 @@ import './styles/Presentation.css'
 function Presentation() {
   return (
     <div className="presentation">
-      <img className='presentation__lines' src="images/svg/presentationLines.svg"/>
-      <span className='presentation__span'>No Pares de Estudiar</span>
       <section className='presentation__rectangle'>
+        <img className='presentation__lines' src="images/svg/presentationLines.svg"/>
         <h3 className='presentation__phrase'>
-          <span>AYUDANOS <div className='presentation__rectangle__long'></div></span> A<br/> 
-          <span>CUMPLIR <div className='presentation__rectangle__first'></div></span> TUS  
-          <span> METAS <div className='presentation__rectangle__second'></div></span></h3>
+          Únete a <span><div className='presentation__rectangle__long'></div>Upgrade</span><br /><span>
+          <div className='presentation__rectangle__long'></div>Academy</span> y aprende<br/> con nosotros  
+        </h3>
+        <p className='presentation__text'>Somos una academia enfocada<br/> en ayudar a estudiantes<br/> con dificultades en materias STEM.</p>
       </section>
       <section>
-        <img className="presentation__image presentation__image__man" src="images/veloz.webp" alt="presentation-man" />
-        <img className="presentation__image presentation__image__calendar" src="images/presentation-calendar.webp" alt="presentation-calendar" />
+        <img className="presentation__image presentation__image__man" src="images/velozbuho.webp" alt="presentation-man" />
         <img className="presentation__image presentation__image__bar" src="images/presentation-bar.webp" alt="presentation-bar"/>
       </section>
 

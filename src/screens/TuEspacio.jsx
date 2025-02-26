@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import { useEffect, useRef } from 'react';
+//import Lottie from 'react-lottie'
 
 function TuEspacio({user}) {
   const iconRef = useRef(null);
@@ -42,6 +43,7 @@ function TuEspacio({user}) {
             hola {user.displayName}
         </p>
         <animated-icons ref={iconRef}></animated-icons>
+        {/**<Lottie animationData={groovyWalk} */}
     </div>
   )
 }
