@@ -17,6 +17,7 @@ function WhatsSAPI() {
         </div>
         <div className='whatsSAPI_image'>
             <img src="images/zowl.webp" alt="zowl" />
+            <div className='whatsSAPI_image_background'></div>
         </div>
     </section>
     </>

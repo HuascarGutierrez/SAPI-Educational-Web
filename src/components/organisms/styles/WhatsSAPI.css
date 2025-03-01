@@ -1,5 +1,6 @@
 .whatsSAPI {
     width: 85%;
+    height: auto;
     display: flex;
     flex-direction: row;
     gap: 5%;
@@ -36,10 +37,21 @@
 }
 
 .whatsSAPI_image{
+    overflow: visible;
     position: relative;
-    background-color: var(--color-green-light);
+    z-index: 0;
 }
 
 .whatsSAPI_image img{
+    z-index: 1000;
+}
+
+.whatsSAPI_image_background{
+    width: 70%;
+    height: 100%;
+    background-color: var(--color-green-light);
+    position: absolute;
+    top: 0;
     right: 0;
+    z-index: -1;
 }
