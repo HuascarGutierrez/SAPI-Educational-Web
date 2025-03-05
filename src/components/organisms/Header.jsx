@@ -60,7 +60,6 @@ function Header({user}) {
     <header className="main-header">
         <Logo/>
         <p className="main-header__option">Home</p>
-        <p className="main-header__option">SAPI</p>
         <p onClick={handleOptionsNav} className="main-header__option">Blog</p>
         <p className="main-header__option">Sobre Nosotros</p>
         <div style={{display: 'flex', alignItems: 'center', gap: '10px', minWidth: '25%', justifyContent: 'space-around'}}>
