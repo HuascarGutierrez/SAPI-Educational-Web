@@ -7,7 +7,7 @@ function Benefits() {
     <div className="benefits">
         <section className="benefits_section">
             <div className="benefits_section_title">
-            <HomeTitle color={'green'} title={'Beneficios de UPGR4DE ACADEMY'}/>
+            <HomeTitle color={'green'} title={'Beneficios de SAPI'}/>
             </div>
             <div className="benefits_section_list">
             <Benefit text='Clases pregrabadas disponibles mediante la plataforma SAPI' imageUrl='images/svg/squares.svg'/>
