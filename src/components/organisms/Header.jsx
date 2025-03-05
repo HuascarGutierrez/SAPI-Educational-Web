@@ -63,7 +63,7 @@ function Header({user}) {
         <p className="main-header__option">SAPI</p>
         <p onClick={handleOptionsNav} className="main-header__option">Blog</p>
         <p className="main-header__option">Sobre Nosotros</p>
-        {/**<div style={{display: 'flex', alignItems: 'center', gap: '10px', minWidth: '25%', justifyContent: 'space-around'}}>
+        <div style={{display: 'flex', alignItems: 'center', gap: '10px', minWidth: '25%', justifyContent: 'space-around'}}>
           {user?.emailVerified? 
           <>
             <p className='main-header__option'>Bienvienido<br/> {user.displayName}</p> 
@@ -73,7 +73,7 @@ function Header({user}) {
             <Button text="Inicio Sesión" funcion={handleLoginNav}/>
             <Button text="Registrarse" color="green" funcion={handleSignUpNav}/>
           </>}
-        </div> */}
+        </div> 
     </header>
   )
 }
